@@ -4,11 +4,13 @@
 	<title>Django Page</title>
 </head>
 <body>
-	<form>
+	<form method="POST" action="/login_action/">
 		<h1>发布会管理</h1>
 		<input type="text" name="username" placeholder="username"><br>
 		<input type="password" name="password" placeholder="password"><br>
+		{{ error }}<br>
 		<button id="btn" type="submit">登录</button>
+		{% csrf_token %}
 	</form>
 </body>
 </html>
